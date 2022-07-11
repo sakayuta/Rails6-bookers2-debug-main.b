@@ -94,7 +94,7 @@
             labels: ['6日前', '5日前', '4日前', '3日前', '2日前', '1日前', '今日'],
             datasets: [{
               label: "7日間の投稿数の比較",
-              data: [<%= @books.past_week_count %>],
+              data: [<%= @books.created_days_ago(6).count %>, <%= @books.created_days_ago(5).count %>, <%= @books.created_days_ago(4).count %>, <%= @books.created_days_ago(3).count %>, <%= @books.created_days_ago(2).count %>, <%= @books.created_days_ago(1).count %>, <%= @books.created_days_ago(0).count %>],
               backgroundcolor: 'rgba(255, 80, 120, 1.0)',
               bordercolor: 'rgba(255, 80, 120, 1.0)',
               fill: false
